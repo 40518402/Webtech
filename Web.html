@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="game-container">
+    <!-- Game board -->
+    <div class="board">
+        <div class="row">
+            <div class="cell" id="cell-0"></div>
+            <div class="cell" id="cell-1"></div>
+            <div class="cell" id="cell-2"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="cell-3"></div>
+            <div class="cell" id="cell-4"></div>
+            <div class="cell" id="cell-5"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="cell-6"></div>
+            <div class="cell" id="cell-7"></div>
+            <div class="cell" id="cell-8"></div>
+        </div>
+    </div>
+</div>
+    <!-- Instructions and Player info -->
+    <div class="side-panel">
+        <h2>Tic-Tac-Toe</h2>
+        <p id="instruction">Player 1 is X, Player 2 is O. Choose your competitive level and start playing!</p>
+        <input type="text" id="player1" placeholder="Enter Player 1 Name" />
+        <select id="difficulty">
+            <option value="basic">Basic</option>
+            <option value="extreme">Extreme</option>
+            <option value="elite">Elite</option>
+        </select>
+        <button id="startBtn">Start Game</button>
+        <p id="currentPlayer"></p>
+        <p id="gameStatus"></p>
+        <div id="scoreboard">
+            <h3>Scoreboard</h3>
+            <p id="player1Score">Player 1 (X): 0</p>
+            <p id="player2Score">Computer (O): 0</p>
+        </div>
+    </div>
+
+        <div class="side-panel2">
+        <h2>How to Play</h2>
+        <p id="instructions">
+            <p><b>Player 1:</b>enters their name.
+            <p><b>Difficulty Levels:</b>Player 1 can choose between three levels for the computer:</p>
+            <p><b>Basic:</b>The computer makes random moves.</p>
+            <p><b>Extreme:</b>The computer blocks Player 1’s winning moves.</p>
+            <p><b>Elite:</b>The computer uses the Minimax algorithm to make optimal moves.</p>
+            <p><b>Scoreboard:</b>Tracks and updates the scores for Player 1 and Player 2 (computer).</p>
+            <p><b>Game End:</b>Displays a message indicating who won, and updates the scoreboard.</p>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
