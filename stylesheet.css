@@ -1,3 +1,4 @@
+/* Base Styles for the Body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,15 +7,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:#525252;
+    background-color: #525252;
 }
 
+/* Game Container: Center the game and panels */
 .game-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 40%;
+    width: 80%;
+    max-width: 1200px;
 }
 
+/* Board Styling */
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -34,27 +39,23 @@ body {
     cursor: pointer;
 }
 
-.side-panel {
-    width: 20%;
+/* Side Panel: Style the player info panel */
+.side-panel, .side-panel2 {
+    width: 100%;
+    max-width: 300px;
     padding: 20px;
     background-color: #fff;
     border: 2px solid #000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    margin: 10px;
 }
 
-.side-panel2{
-    width: 20%;
-    padding: 20px;
-    background-color: #fff;
-    border: 2px solid #000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Buttons and Inputs */
 input, select, button {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
+    font-size: 1em;
 }
 
 button {
@@ -68,6 +69,7 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Responsive Typography */
 h2 {
     margin-top: 0;
 }
@@ -79,4 +81,59 @@ h2 {
 #scoreboard {
     margin-top: 30px;
     font-weight: bold;
+}
+
+/* Mobile-first approach - Layout adjustments for smaller screens */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 80px); /* Adjust grid size */
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .side-panel, .side-panel2 {
+        width: 90%; /* Make side panels narrower */
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller heading on mobile */
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* Further adjustment for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .game-container {
+        width: 100%;
+    }
+
+    .side-panel, .side-panel2 {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 60px); /* Smaller grid size */
+        grid-template-rows: repeat(3, 60px);
+    }
+
+    .cell {
+        font-size: 1.5em; /* Smaller font inside cells */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Even smaller heading */
+    }
+
+    button {
+        font-size: 1em;
+    }
 }
