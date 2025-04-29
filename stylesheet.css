@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#525252;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.side-panel {
+    width: 20%;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.side-panel2{
+    width: 20%;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#currentPlayer, #gameStatus {
+    margin-top: 20px;
+}
+
+#scoreboard {
+    margin-top: 30px;
+    font-weight: bold;
+}
